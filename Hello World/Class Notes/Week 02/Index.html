@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Form Elements</h1>
+
+    <!-- Form using basic imput type -->
+    <!-- see w3 school tutorials for more -->
+     <p>
+        <!-- The form action usually contains a file or liunk  to 
+         process the form fields once a user clicks submit. -->
+         <!-- can doe _ / - / uppercase -->
+          <!-- method = "GET","POST" -->
+        <!-- For now the main form attribute to worry about is method="" -->
+         <a href="https://www.w3schools.com/html/html_forms_attributes.asp"></a>
+     </p>
+    <form
+      action="create_profile.js" 
+      name="user_create" 
+      target="_self" 
+      method="get"></form>
+    <!-- fieldset are for grouping input elements, they are labeled by the legend tag within it -->
+      <fieldset>
+        <legend>Simple Text Imput</legend>
+        <p>
+           This is your most basix text input. We change input by
+           changing the value of the type attribute. 
+        </p>
+        <!-- label for attribute should match input name attribute -->
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" disabled/> 
+        <!-- disabled prevent the section to be filled -->
+        <br />
+        <label for="last_name">Last Name:</label>
+        <input 
+        type="text" 
+        name="last_name" 
+        maxlength="5" 
+        placeholder="Wu"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Text Area</legend>
+        <label for="why_class">Why did you take this class?</label>
+        <textarea 
+        name="why_class" 
+        cols="50" 
+        rows="5"
+        required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Common Input Type</legend>
+        <label for="cost">Number</label>
+        <input
+        name="cost" 
+        type="number" 
+        min="10" 
+        max="100" 
+        step=".01"
+        />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" name="password"/>
+        <br />
+        <label for="favorite color">Favorite Color</label>
+        <input type="color" name="favorite color" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Check Boxes</legend>
+        <p>Check Boxes allow the user to select more than one option at once. 
+            They all grouped checkbox inputs share the 
+            <em>same name but different value</em>
+        </p>
+        <p>What pets do you have?</p>
+        <input type="checkbox" name="pet" value="dog" /><label>Dog</label>
+        <input type="checkbox" name="pet" value="cat" /><label>Cat</label>
+        <input type="checkbox" name="pet" value="chicken" /><label>Chicken</label>
+        <input type="checkbox" name="pet" value="lizard" /><label>Lizard</label>
+        <!-- Same name="" the value has to match the label-->
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Fields</legend>
+        <p>Radio fields allow the user to select only one option at a time. 
+            All grouped radio inputs share the <em>same name but different values</em>
+        </p>
+        <input type="radio" name="favorite_pet" value="dog" /><label>Dog</label>
+        <input type="radio" name="favorite_pet" value="cat" /><label>Cat</label>
+        <input type="radio" name="favorite_pet" value="chicekn" /><label>Chicken</label>
+        <input type="radio" name="favorite_pet" value="lizard" /><label>Lizard</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Option Dropdowns</legend>
+        <label for="state">Pick a State</label>
+        <select name="state">
+            <option value="NY">New York</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NM">New Mexico</option>
+        </select>
+      </fieldset>
+      <input type="button" value="Submit" name="submit_profile_d" disabled/>
+      <button title="This is a disable submit button usinf the button tag" name="submit_profile">Create Profile</button>
+    </form>
+  </body>
+</html>
