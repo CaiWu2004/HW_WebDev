@@ -15,42 +15,74 @@
     <!-- Here is some starter content. We will mark this up to contain a header, nav, article, section, aside, footer and more! Bonus points if you use even more semantic HTML elements in your HW this week. -->
     <!-- We will be marking this up as our main menu -->
 
-    My Online Store
+    <h1>My Online Store</h1>
     <!-- Main Navigation -->
-    Home New Arrivals Accessories Clothing Footwear
+<nav>  Home New Arrivals Accessories Clothing Footwear
     <!-- End Main Navigation -->
-
+</nav> 
     <!-- Lets assume we are on a product page for some sort of shoe type -->
     <!-- Since we are in the shoe section, we might want to help the user choose other shoe types easily with a sidebar -->
-
+<aside>
     <!-- Sidebar with seconday navigation -->
-    Boots Sandals Flip Flops Flats Heels Sneakers
-    <!-- Subnav for different sneaker types -->
-    Cross Trainers Running Fashion Slip Ons
+    <nav>
+    <ul>
+      <li>Boots</li>
+      <li>Sandals</li>  
+      <li>Flip Flops</li> 
+      <li>Flats</li>
+      <li>Heels</li> 
+      <li>Sneakers
+        <nav>
+          <ul>
+            <li>Cross</li>
+            <li>Trainers</li> 
+            <li>Running</li>
+            <li>Fashion</li>
+            <li>Slip Ons</li> 
+          </ul>
+        </nav>
+      </li> 
+    </ul>
+    <!-- Subnav for different sneaker types -->    
     <!-- Sidebar with seconday navigation -->
-
+  </nav>
+</aside>
     <!-- Main page content -->
     <!-- Here is where we would show thumbnail images for all of our running shoes. We are going to use placeholder kittens from https://placekitten.com/. We will reuse the same thumbnail and description 6 times.  -->
     <!-- Title for our page, remember, we have already used an H1, and we should only have 1 H1 per page! -->
-    Sneakers
+    <h2>Sneakers</h2>
 
     <!-- Individual image, with caption using figure and figcaption -->
-    <img src="http://placehold.it/300x200" />
+   <article>
+     <img src="http://placehold.it/300x200" />
+    </article>
     <!-- This text should be emphasized -->
-    This is a shoe, a fancy shoe.
+   <p>
+    <h1>
+      <em>This is a shoe, a fancy shoe.</em>
+    </h1>
+  </p>
     <!-- Price on new line, make this text strong -->
+   <h2>
     <strong>$70</strong>
+   </h2> 
+   <ul>
     <!-- A link to the individual product page, again on a new line -->
-    Shoe #1
+   <li>Shoe #1</li> 
     <!-- End Individual image, with caption using figure and figcaption -->
 
     <!-- Copy figure stuff 5 times, make sure it is all contained in the wrapper for our main page content! -->
 
     <!-- End Main page content  -->
+  </ul>
 
     <!-- And finally, a footer for our page!  -->
     &copy; Shoe Store 2016
     <!-- social links, We will cover font awesome icons soon -->
-    facebook twitter instagram
+    <ul>
+      <li>facebook</li> 
+      <li>twitter</li> 
+      <li>instagram</li>
+    </ul>
   </body>
 </html>
