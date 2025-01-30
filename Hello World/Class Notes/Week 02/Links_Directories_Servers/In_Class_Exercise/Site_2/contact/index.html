@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Us Site 2</title>
+    <meta
+      name="description"
+      content="Method 2 - Each Page as Own Directory Folder with Index.html within"
+    />
+  </head>
+
+  <body>
+    <!-- Place your Nav Links Here -->
+    <nav>
+      <!-- use UL LI and A for Nav Links within our NAV tag -->
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="./index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Contact Us</h1>
+    <!-- Bonus - Place Images Here -->
+     <img alt="Handsome Rooster" src="../img/chicken3.jpeg" />
+    <!-- Double Bonus - Add Contact Form Here -->
+     
+    <form method="POST" name="context">
+      <h3>Contact Us</h3>
+      <label for="firstName">First Name</label>
+      <br/>
+      <input type="text" name="firstName" placeholder="Jane" required />
+      <br />
+      <label type="lastName">Last Name</label>
+      <br />
+      <input type="text" name="lastName" placeholder="Doe" required />
+      <br />
+      <label type="email">Email</label>
+      <br />
+      <input type="text" name="email" placeholder="janedoes@gmail.com" required />
+      <br />
+      <label for="message" >What's Up?</label>
+      <br />
+      <textarea name="message" cols="100" rows="10" required></textarea>
+      <br />
+      <button>Send Message</button>
+     </form>
+
+  </body>
+</html>
