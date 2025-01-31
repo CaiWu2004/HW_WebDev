@@ -10,96 +10,78 @@
     <meta name="keywords" content="HTML, Semantic HTML, Tutorial" />
     <meta name="author" content="NYU" />
   </head>
-  <style>
-    #M{color: orange}  
-    #Chedder{color: orange}
-    #Cheese{color: orange}
-    #MC{color: orange}
-    </style>
+
   <body>
-    <!-- Here is some starter content. We will mark this up to contain a header, nav, article, section, aside, footer and more! Bonus points if you use even more semantic HTML elements in your HW this week. -->
-    <!-- We will be marking this up as our main menu -->
-<Header>
-    <h1 id="M">My Mac & Cheese recipe</h1>
-    <!-- Main Navigation -->
-   <nav> 
-    <ul>Home</ul>
-   </nav>
-    <!-- End Main Navigation -->
-</Header>
+    <div id="wrap">
 
-    <!-- Lets assume we are on a product page for some sort of shoe type -->
-    <!-- Since we are in the shoe section, we might want to help the user choose other shoe types easily with a sidebar -->
-<aside> 
- <h2 id="Chedder"><em>Ingredients</em></h2>  
-   <nav><!-- Sidebar with seconday navigation -->
-     <ul><h3>Macaroni</h3>
-        <nav>
-            <ul>
-                <li>Salt</li>
-                <li>Water</li>
-                <li>Macaroni</li>
-            </ul>
-        </nav>
-    </ul>  
-    <ul><h3>Cheese</h3>
-    <li>All-Purposed Flour</li>
-    <li>Whole Milk</li>
-    <li>Creme Fraiche</li>
-    <li>Unsalted Butter </li>
-    <li>Cheese
-        <nav>
-            <ul>
-                <li>
-                1/2 : 1/2 of Raclette and Chedder 
-            </li>  
-            </ul>
-        </nav>
-    </li>
-</ul>
-    <!-- Subnav for different sneaker types -->
+       <header id="header">
+            <div id="title">
+                <h1>Mac and Cheese</h1>
+
+            </div>
+
+            <nav id="main-nav">
+                Home 
+            
+            </nav>
+       </header>
+
+    <div id="main">
         
-    <!-- Sidebar with seconday navigation -->
-   </nav> 
-</aside>
-    <!-- Main page content -->
-    <!-- Here is where we would show thumbnail images for all of our running shoes. We are going to use placeholder kittens from https://placekitten.com/. We will reuse the same thumbnail and description 6 times.  -->
-    <!-- Title for our page, remember, we have already used an H1, and we should only have 1 H1 per page! -->
-    
+        <div id="ingredients">
+            
+            <aside>
+                <h2><em>Ingredients</em></h2>
 
-    <!-- Individual image, with caption using figure and figcaption -->
-<article>
-    <img src="../Week01/img/mac&cheese.avif" 
-    width="620px"/>
-</article>
-<h2 id="MC">Mac & Cheese</h2>
-<br />  
- <p>
- Have you had enough with the salty and process kraft Mac & Cheese? 
-<br />Well no more! Here we will teach you how to make authentic home made macaroni and cheese. 
-<br />No more process powder cheese but creamy and velvety cheese within nine simple steps!
-</p>
-    <!-- Price on new line, make this text strong -->
-    <h2 id="Cheese"><strong>Instructions</strong></h2>
-    <!-- A link to the individual product page, again on a new line -->
-    <hr />
-    <ol>
-        <li>Season your boiling water generously with salt(2 tbsp).</li>
-        <li>Add your pasta of choiuce and cook juntil al dente.</li>
-        <li>Drain the pasta and set it to the side. </li>
-        <li>Add butter to a medium saucepan or any other pan on medium heat.</li>
-        <li>Once the butter is melted, add an equal part flour and mix for about 45 seconds.</li>
-        <li>Slowly add your whole milk into the mixture and keep whisking on medium heat until it thickens.</li>
-        <li>Introduce your cheese to the saucepan anmd whisk until velvety smooth.</li>
-        <li>Finish off the sauce by adding a little bit of creme fraiche.</li>
-        <li>Finally toss in your cooked pasta and coat it with sauce.</li>
-    </ol>
+                <nav>
+                    <ul>
+                        <li>Salt</li>
+                        <li>Water</li>
+                        <li>1/2 lb Macaroni</li>
+                        <li>2 Tbsp (28g) Unsalted Butter</li>
+                        <li>2 Tbsp (18g) All-Purposed Flour</li>
+                        <li>1 Cup (240ml) Whole Milk</li>
+                        <li>2 Cups (180g) Cheese
+                            <ul>
+                                <li>1/2 : 1/2 of Raclette and Chedder</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>         
+        </div>
+        <div id="img">
+            <article>
+                
+                <a href="../Week01/img/mac&cheese.avif"></a>
+            
+            </article>
 
+            <h2><em>Instructions</em></h2>
+
+                <p>
+                    <li>Season your boiling water generously with salt(2 tbsp).</li>
+                    <li>Add your pasta of choiuce and cook juntil al dente.</li>
+                    <li>Drain the pasta and set it to the side. </li>
+                    <li>Add butter to a medium saucepan or any other pan on medium heat.</li>
+                    <li>Once the butter is melted, add an equal part flour and mix for about 45 seconds.</li>
+                    <li>Slowly add your whole milk into the mixture and keep whisking on medium heat until it thickens.</li>
+                    <li>Introduce your cheese to the saucepan anmd whisk until velvety smooth.</li>
+                    <li>Finish off the sauce by adding a little bit of creme fraiche.</li>
+                    <li>Finally toss in your cooked pasta and coat it with sauce.</li>
+                </p>
+        
+        </div>
+    </div>
     <hr />
-    <a href="https://www.facebook.com/thejoshuaweissman" target="_blank"><li>Facebook</li></a> 
-    <a href="https://x.com/therealweissman?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><li>X</li></a>
-    <a href="https://www.instagram.com/joshuaweissman/" target="_blank"><li>Instagram</li></a>
-    <a href="https://www.youtube.com/c/JoshuaWeissman" target="_blank"><li>Youtube</li></a>
-  
+    <p>
+        <a href="https://www.joshuaweissman.com/post/homemade-mac-and-cheese" target="_blank">Original recipe
+        </a>
+    </p>
+    <ul>
+      <a href="https://www.facebook.com/thejoshuaweissman" target="_blank"><li>Facebook</li></a> 
+      <a href="https://x.com/therealweissman?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><li>X</li></a>
+      <a href="https://www.instagram.com/joshuaweissman/" target="_blank"><li>Instagram</li></a>
+      <a href="https://www.youtube.com/c/JoshuaWeissman" target="_blank"><li>Youtube</li></a>
   </body>
 </html>
