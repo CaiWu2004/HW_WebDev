@@ -5,7 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Simple Navbar</title>
 
-    <style type="text/CSS"></style>
+    <style type="text/CSS">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header{
+        width: 100%;
+        background-color: cornflowerblue; 
+      }
+      body {
+        font-family:'Lucida Sans', 'Lucida Sans regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Geneva, Tahoma, sans-serif;
+      }
+      /* looking for a new tag with the id of main-nav and then find Ul tags inside */
+      nav#main-nav ul{
+        /* remove all bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        background-color: cornflowerblue;
+        /* since we are using inline block, we need to zero out the font-size */
+        font-size: 0;
+      }
+
+      #main-nav u{
+        /* li display block by default, 
+        they want to take 100% width up and not share horizontal space */
+        display: inline-block;
+        font-size: 1rem;
+      }
+
+      li a{
+        display: block;
+        text-align: center;
+        width: 100px;
+        padding: 10px;
+        /* remove the default link styles */
+        text-decoration: none;
+        color: aquamarine;
+      }
+
+      li a:hover {
+        background-color: rpg(0,0,0,0.1);
+        color: #ffff;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Brand Logo</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 1</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
