@@ -4,6 +4,128 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CSS Only Modal</title>
+    <!-- Internal Stylesheet -->
+    <style type="text/css">
+
+      *{
+        box-sizing: border-box;
+      }
+
+      html, body{
+        margin: 0;
+        padding-top:2rem ;
+      }
+      /* Button/Link Styles */
+      a.button {
+        text-decoration: none;
+        color: white;
+        background-color: blueviolet;
+        padding:1rem 2rem;
+        border-radius: 0.25 rem;
+        margin: 1rem 2rem;
+      }
+      /* Modal Style */
+      .info_modal{
+        /* Stretch the baclground to cover the entire screen */
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* transparent grey background */
+        background-color: rgb(0,0,0,0.3);
+        /* make sure this modal and its content show over/in 
+        front of everything else on the page*/
+        z-index: 99999999;
+        /* starting state opacity */
+        opacity: 0;
+        /* make sure even though its  see through, 
+        make sure the user cannot interact with it*/
+        pointer-events: none;
+        /* transition rules on starting state */
+        transition: opacity 400ms ease-in;
+        /* flex container so we can center the model window within */
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      .info_modal:target {
+        /* safe the correct modal in id === target */
+        opacity: 1;
+        /* make sure we re-allow pointer events */
+        pointer-events: auto;
+      }
+
+      .info_modal > div {
+        width: 300px;
+        height: 300px;
+        /* this is relative so that we can absolutely position a close button within */
+        position: relative;
+        /* margin: 10% auto; */
+        padding: 2rem;
+        background-color: antiquewhite;
+        border-radius: 10px ;
+      }
+
+      .close {
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        color: black;
+        /* position in the right top corner */
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        transition: all 1s ease;
+        /* in class exercise at end is to make this better */
+        border-radius: 10px;
+      }
+
+      .close:hover {
+        background-color: black;
+        color: white;
+      }
+
+      /* nice atomic style for centering content within a "box" */
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!-- Id in href is to twll us which modal to open -->
+     <!-- class button is to style it -->
+    <a href="#info" class="button">Link to Modal 1</a>
+    <a href="#info2" class="button">Link to Modal 2</a>
+
+    <!-- parent wrrapper div recieve the ID we target, 
+     this is also out transparent overlay div -->
+     <div id="info" class="info_modal center">
+      <!-- This child div is the modal box itself -->
+      <div >
+        <!-- A close button that is absolutely positioned -->
+         <a href="#close" class="close">X</a>
+         <!-- You can put whatever HTML you want in here -->
+         <h2>Tital of Modal 1</h2>
+          <p>Hi! Look at me! i'm the first Modal!</p>
+      </div>
+     </div>  
+
+
+     <div id="info2" class="info_modal center">
+      <!-- This child div is the modal box itself -->
+      <div >
+        <!-- A close button that is absolutely positioned -->
+        <a href="#close" class="close">X</a>
+        <!-- You can put whatever HTML you want in here -->
+        <h2>Tital of Modal 2</h2>
+        <p>Hi! Look at me! i'm the second Modal!</p>
+      </div>
+     </div>
+  </body>
 </html>
