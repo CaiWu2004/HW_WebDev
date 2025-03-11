@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+}
+
+
+html, body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background: url('../img/chinese_name.jpg') no-repeat center fixed; */
+}
+
+img{
+    width:100%;
+    height: auto;
+}
+
+/* header and navigation bar */
+
+header {
+    width: 100%;
+    padding: 0;
+    height: 100px;
+    background-color: grey;
+    overflow-y: hidden;
+    /* position: fixed; */
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: url('../img/waterpattern.webp');
+    position: relative;
+    /* position: relative; */
+}
+
+header h1{
+    padding: 10%;
+}
+
+h1 {
+    color: #333;
+    font-size: 30px;
+}
+
+nav ul{
+    margin:0; 
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    background-color:rgba(40,40,40,0.5);
+}
+
+nav li{
+    font-size: 10px;
+    height: 50px;
+    min-width: 100px;
+    line-height: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 1s;
+}
+
+nav a:hover{
+    background-color:rgba(40,40,40,0.5) ;
+    color: white;
+}
+
+nav a:active{
+    background-color: rgba(40,40,40,0.5);
+    color: white;
+}
+
+
+/* img */
+
+.container{
+   width:100%;
+   margin: 0;
+   scale: 1;
+}
+
+#desktop {
+    display: block;
+}
+
+#tablet {
+    display: none;
+}
+
+#mobile {
+    display: none;
+}
+
+.bottom_nav{
+margin: 0;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+
+.bottom_nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: grey;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width:1024px){
+    body {
+         background-color: burlywood; 
+    }
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding-top: 10%;
+        padding-left: 10px;
+        padding-right: 10px;
+ 
+    }
+
+    .fonts {
+        width:100%;
+        position: relative;
+        /* padding-right: 0;
+        padding-left: 0; */
+    }
+
+     /* .fonts li{
+        border-bottom: 10px solid rgba(0,0,0,0.3);
+        text-align: start;
+        min-width:5rem; 
+    }  */
+
+    /* .fonts{
+        font-weight: 200;
+    } */
+    .bottom_nav ul{
+        height: 50px;
+    }
+
+    .bottom_nav li{
+        min-width: 5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mobile-menu{
+        display: none;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #tablet {
+        display: block;
+    }
+
+    #mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width:767px){
+    body {
+        background-color: burlywood;
+    }
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    header h1{
+        margin: 0.5rem;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        font-size: 2rem;
+        color: #aaa;
+        cursor: pointer;
+      }
+
+    .fonts {
+        /* having trouble geeting it to show */
+        flex-direction: row;
+        width: 100%;
+      }
+    
+    .fonts li {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+      }
+
+    .container{
+        padding-top: 15%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+    }
+
+    .bottom{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .bottom ul{
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .bottom li{
+        min-width: 5rem;
+        align-items: start;
+    }
+
+
+    /* .bottom_nav ul {
+        flex-direction: column;
+    } */
+
+    #desktop {
+        display: none;
+    }
+
+    #tablet {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #main-nav {
+        display: none;
+      }
+    
+    .show {
+        display: block;
+        z-index: 100000000;
+      }
+}

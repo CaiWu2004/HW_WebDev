@@ -1,0 +1,268 @@
+/* default setting */
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: burlywood;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* header and navigation bar during desktop mode */
+
+header{
+    width: 100%;
+    padding: 0;
+    height: 100px;
+    background-color: violet;
+    overflow-y: hidden;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: url('./img/waterpattern.webp');
+    position: relative;
+}
+
+/* header edits */
+
+.top_nav h1{
+    padding: 10%;
+}
+
+h1 {
+    color: #333;
+    font-size: 30px;
+}
+
+/* nav bar */
+
+#main_nav ul{
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    text-align: none;
+    background-color: rgba(40,40,40,0.5);
+}
+
+#main_nav li{
+    font-size: 10px;
+    height: 50px;
+    min-width: 100px;
+    line-height: 50px;
+}
+
+#main_nav a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 1s;
+    font-size: 20px;
+}
+
+#main_nav a:hover{
+    background-color: rgba(40,40,40,0.5);
+    color: white;
+}
+
+#main_nav a:active{
+    background-color: 40,40,40,0.5;
+    color: white;
+}
+
+/* img setting on desktop mode */
+
+.container{
+    width: 100%;
+    margin: 0;
+    scale: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Only seeing the img I want on their own screen size */
+
+#desktop{
+    display: block;
+}
+
+#tablet{
+    display: none;
+}
+
+#mobile{
+    display: none;
+}
+
+/* Bottom navigation */
+
+.bottom_nav ul{
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url("./img/waterpattern.webp");
+}
+
+.bottom_nav li{
+    font-size: 10px;
+    height: 50px;
+    min-width: 100px;
+    line-height: 50px;
+}
+
+.bottom_nav a{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 1s;
+    font-size:20px ;
+}
+
+.bottom_nav a:hover{
+    background-color:rgba(40,40,40,0.5) ;
+    color: white;
+}
+
+
+.bottom_nav a:active{
+    background-color: rgba(40,40,40,0.5);
+    color: white;
+}
+
+/* Tablet Screen Mode */
+
+@media screen and (max-width: 1024px){
+    body{
+        background-color: burlywood;
+    }
+    /* The img setting's */
+    .container{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    /* Navigation bar */
+
+    /* Top nav */
+    .top_nav{
+        height: 60px;
+    }
+
+    .top_nav h1{
+        font-size: 1.5rem;
+        width: 10rem;
+    }
+
+    #main_nav ul{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #main_nav li{
+        min-width: 5rem;
+    }
+
+    #main_nav a{
+        
+        text-align:center;
+    }
+
+    /* bottom nav */
+    .bottom_nav{
+        position:absolute;
+        width: 100%;
+    }
+
+    #second_nav ul{
+        width: auto;
+        align-items: center;
+        padding: 0;
+    }
+
+    #second_nav li{
+        /* min-width: center; */
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    #second_nav a{
+        font-size: 10px;
+        justify-items:left ;
+    }
+
+    /* Screen Mode display */
+    #desktop{
+        display: none;
+    }
+
+    #tablet{
+        display: block;
+    }
+
+    #mobile{
+        display: none;
+    }
+}
+/* phone screen mode */
+@media screen and (max-width:768px /* 767?*/ ){
+
+/* img edits */
+.container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* bottom navigation */
+
+.bottom-nav{
+    width: 100%;
+}
+
+#second_nav a{
+    position: left;
+    justify-items: left;
+}
+
+
+
+
+
+
+/* display the img on phone screen mode */
+
+#desktop{
+    display: none;
+}
+
+#tablet{
+    display: none
+}
+
+#mobile{
+    display:block;
+}
+}
+
