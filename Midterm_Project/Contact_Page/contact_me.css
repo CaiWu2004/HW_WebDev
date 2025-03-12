@@ -11,11 +11,6 @@ body {
   background-color: burlywood;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 /* header and navigation bar during desktop mode */
 
 header {
@@ -82,36 +77,6 @@ h1 {
   color: white;
 }
 
-/* img setting on desktop mode */
-
-.container {
-  width: 100%;
-  margin: 0;
-  scale: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/* Only seeing the img I want on their own screen size */
-
-#desktop {
-  display: block;
-}
-
-#tablet {
-  display: none;
-}
-
-#mobile {
-  display: none;
-}
-
-.home_page {
-  display: none;
-}
-
 /* Bottom navigation */
 
 .bottom_nav ul {
@@ -149,22 +114,13 @@ h1 {
   color: white;
 }
 
-/* Tablet Screen Mode */
+/* Tablet */
 
 @media screen and (max-width: 1024px) {
   body {
     background-color: burlywood;
   }
-  /* The img setting's */
-  .container {
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-  }
+
   /* Navigation bar */
 
   /* Top nav */
@@ -214,84 +170,9 @@ h1 {
     font-size: 10px;
     justify-items: left;
   }
-
-  /* Screen Mode display */
-  #desktop {
-    display: none;
-  }
-
-  #tablet {
-    display: block;
-  }
-
-  #mobile {
-    display: none;
-  }
-
-  #home_page {
-    display: hidden;
-  }
-
-  .home_page {
-    display: none;
-  }
 }
-/* phone screen mode */
-@media screen and (max-width: 768px /* 767?*/) {
-  /* img edits */
-  .container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 
-  /* menu */
-
-  .home_page {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    font-size: 2rem;
-    color: #aaa;
-    cursor: pointer;
-  }
-
-  /* Top nav */
-  header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    padding: 0;
-  }
-
-  h1 {
-    margin: 0.5rem;
-  }
-
-  /* menu */
-
-  .home_page {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    font-size: 2rem;
-    color: #aaa;
-    cursor: pointer;
-  }
-
-  #main_nav ul {
-    flex-direction: column;
-    width: 100%;
-    z-index: 2000000000px;
-  }
-
-  #main_nav ul li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-  }
+@media screen and (max-width: 768px) {
   /* bottom navigation */
 
   .bottom-nav {
@@ -300,19 +181,5 @@ h1 {
 
   #second_nav a {
     justify-items: left;
-  }
-
-  /* display the img on phone screen mode */
-
-  #desktop {
-    display: none;
-  }
-
-  #tablet {
-    display: none;
-  }
-
-  #mobile {
-    display: block;
   }
 }
