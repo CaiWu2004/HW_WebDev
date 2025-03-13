@@ -58,7 +58,8 @@ don't display it in home page */
 
 /* prevent the li  wdith from being smaller than 5rem */
 .menu li {
-  min-width: 5rem;
+  min-width: 10rem;
+  font-size: 2rem;
 }
 
 /* working on the links: a, deeper within the li */
@@ -132,7 +133,7 @@ don't display it in home page */
 }
 
 .bt_menu li {
-  min-width: 5rem;
+  min-width: 10rem;
 }
 
 .bt_menu a {
@@ -225,7 +226,7 @@ left to right */
     display: block;
     position: absolute;
     /* brought the sign down */
-    top: 1.9rem;
+    top: 2.6rem;
     /* move it to the right */
     right: 1rem;
     color: black;
@@ -258,6 +259,8 @@ left to right */
   }
 
   .container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     flex-direction: column;
   }
 
@@ -265,6 +268,7 @@ left to right */
     display: none;
   }
 
+  /* This is an issue, the bottom nav not showing */
   .bt_menu {
     display: block;
   }
