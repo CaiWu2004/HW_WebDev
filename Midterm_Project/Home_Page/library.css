@@ -215,10 +215,12 @@ left to right */
     justify-content: center;
     align-items: stretch;
     padding: 0;
+    height: 8rem;
   }
 
   .name {
-    margin: 0.5rem;
+    margin: 3.5rem;
+    font-size: 3rem;
   }
 
   /* hamgurger sign ||| */
@@ -226,7 +228,7 @@ left to right */
     display: block;
     position: absolute;
     /* brought the sign down */
-    top: 2.6rem;
+    top: 2rem;
     /* move it to the right */
     right: 1rem;
     color: black;
@@ -238,6 +240,7 @@ left to right */
     /* background-color: grey; */
     flex-direction: column;
     width: 100%;
+    background-color: white;
   }
 
   .menu li {
