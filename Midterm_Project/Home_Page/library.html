@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./library.css" />
+    <link rel="stylesheet" type="text/css" href="./library.css" />
     <script type="text/javascript">
       // listen for the page to load
-      document.addEventListener("DOMContentLoader", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         // store the hamburger icon as a varible of hamburger
         const hamburger = document.getElementById("hamburger");
         // add a click event listener to our hamburger menu icon that calls out toggle menu function
@@ -17,18 +17,18 @@
       // write a function that grabs our nav bt ID and applies the class .show
       function toggleMenu() {
         // grab the new element by it's id and add/remove the class .show
-        const navigation = document.getElementById("main_nav");
-        navigation.classList.toggle("show");
+        const navbar = document.getElementById("main_nav");
+        navbar.classList.toggle("show");
       }
     </script>
   </head>
   <body>
     <header class="top_nav">
-      <h1>Harry Wu</h1>
+      <h1 class="name">Harry Wu</h1>
       <!-- The hamburger sign that I can click with -->
       <span class="home_page" id="hamburger">&#8801;</span>
       <nav id="main_nav">
-        <ul>
+        <ul class="menu">
           <li><a href="library.html" class="home">Home</a></li>
           <li><a href="#" class="home">Projects</a></li>
           <li><a href="#" class="home">Resume</a></li>
@@ -37,7 +37,7 @@
               >Contact</a
             >
           </li>
-          <li><a href="#" class="home">Bio</a></li>
+          <li><a href="../Bio_Page/bio.html" class="home">Bio</a></li>
         </ul>
       </nav>
     </header>
@@ -52,7 +52,7 @@
 
     <div class="bottom_nav">
       <nav id="second_nav">
-        <ul>
+        <ul class="bt_menu">
           <li><a href="library.html" class="home">Home</a></li>
           <li><a href="#" class="home">Projects</a></li>
           <li><a href="#" class="home">Resume</a></li>
@@ -61,7 +61,7 @@
               >Contact</a
             >
           </li>
-          <li><a href="#" class="home">Bio</a></li>
+          <li><a href="../Bio_Page/bio.html" class="home">Bio</a></li>
         </ul>
       </nav>
     </div>
