@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./library.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script type="text/javascript">
       // listen for the page to load
       document.addEventListener("DOMContentLoaded", function () {
@@ -24,7 +31,7 @@
   </head>
   <body>
     <header class="top_nav">
-      <h1 class="name">Harry Wu</h1>
+      <h1 class="name"><a href="library.html">Harry Wu</a></h1>
       <!-- The hamburger sign that I can click with -->
       <span class="home_page" id="hamburger">&#8801;</span>
       <nav id="main_nav">
@@ -41,6 +48,7 @@
         </ul>
       </nav>
     </header>
+
     <div class="container">
       <!-- Image that fits the desktop screen -->
       <img src="./img/chinese_name.jpg" alt="Home Page" id="desktop" />
@@ -51,19 +59,12 @@
     </div>
 
     <div class="bottom_nav">
-      <nav id="second_nav">
-        <ul class="bt_menu">
-          <li><a href="library.html" class="home">Home</a></li>
-          <li><a href="#" class="home">Projects</a></li>
-          <li><a href="#" class="home">Resume</a></li>
-          <li>
-            <a href="../../../../Contact-C/contact_me.html" class="home"
-              >Contact</a
-            >
-          </li>
-          <li><a href="../Bio_Page/bio.html" class="home">Bio</a></li>
-        </ul>
-      </nav>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="library.html"><i class="fa-solid fa-house"></i></a>
     </div>
   </body>
 </html>

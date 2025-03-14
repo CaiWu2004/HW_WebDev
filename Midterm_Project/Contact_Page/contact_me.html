@@ -5,298 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact Me</title>
     <style type="text/css">
-              /* fonts imported from google */
-              @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-              .press-start-2p-regular {
-                  font-family: "Press Start 2P", system-ui;
-                  font-weight: 400;
-                  font-style: normal;
-              }
-              /* CSS Variables Default */
+      /* fonts imported from google */
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+      /* .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      } */
+      :root {
+        --c-bg: #e2e8f0;
+        --c-text: #475569;
+        --c-bg-btn: #1e293b;
+        --c-btn-hover: #64748b;
+        --c-btn-text: #f8fafc;
+        --ff-heading: "Press Start 2P", system-ui;
+      }
 
-              :root{
-                  --c-bg: #e2e8f0;
-                  --c-text: #475569:
-                  --c-bg-btn: #1e293b;
-                  --c-btn-hover: #64748b;
-                  --c-btn-text: #f8fafc;
-                  --ff-heading:"Press Start 2P", system-ui:
-                  --ff-body:"Press Start 2P", system-ui;
-              }
-              /* Apply different IDs for Different Themes */
-              #blue{
-                  --c-bg:#1e3a8a;
-                  --c-text:#dbeafe;
-                  --c-bg-btn:#3b82f6;
-                  --c-btn-hover:#1d4ed8;
-                  --c-btn-text: #eff6ff;
-              }
+      /* Apply different IDs for Different Color Themes */
 
-              /* Base Styles */
-              body{
-                  font-family:  Helvetica, Arial, sans-serif;
-              }
-              .container{
-                  width: 50%;
-                  margin: 0 auto;
-                  border-radius: 0.5rem;
-                  padding: 2rem;
-                  color: var(--c-text);
-                  background: var(--c-bg);
-              }
-              .row{
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: flex-start;
-                  align-items: flex-start;
-              }
+      #blue {
+        --c-bg: #1e3a8a;
+        --c-text: #dbeafe;
+        --c-bg-btn: #3b82f6;
+        --c-btn-hover: #1d4ed8;
+        --c-btn-text: #eff6ff;
+      }
 
-              .label-lg{
-                  font-size: 2rem;
-              }
+      /* Base styles */
 
-              .input-lg{
-                  padding: 0.5rem;
-                  border-radius: 0.25rem;
-                  /* add css bar for color here */
-                  border: 1px solid grey;
-                  margin-right: 2rem;
-              }
-              .message-area{
-                  display: flex;
-                  flex-direction: column;
-                  margin-top: 2rem;
-                  font-size: 2rem;
-              }
-              .message{
-                  height: 16rem;
-                  border-radius: 0.25rem;
-                  padding: 1rem;
-              }
-              .button-bar{
-                  display: flex;
-                  flex-direction: row-reverse;
-                  margin-top: 2rem;
-              }
-              .btn-dark{
-                  width: 100%;
-                  border-radius: 0.5rem;
-                  padding: 1rem;
-                  background-color: var(--c-bg-btn);
-                  color: var(--c-btn-text);
-                  border: 1px solid var(--c-btn-text);
-              }
-              .btn-dark:hover{
-                  background-color: var(--c-btn-hover);
-              }
-              /* Font varians by changing the ID on the Body tag */
-              #tech h1 {
-                  font-family:var(--ff-heading);
-              }
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 0;
+        background: burlywood;
+      }
 
-              body#tech{
-                  font-family: var(--ff-body);
-              }
+      /* The message me container */
+      .container {
+        width: 50%;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 0 auto;
+        color: var(--c-text);
+        background-color: var(--c-bg);
+      }
+      /* Name, Email, Number secetion */
+      .row {
+        display: flex;
+        /* these are going downwards */
+        flex-direction: column;
+        justify-content: flex-start;
+        /* allow the columns to be places left */
+        align-items: left;
+      }
+      /* The name of the columns */
+      .label-lg {
+        font-size: 1.3rem;
+      }
+      /* the box area */
+      .input-lg {
+        /* makes the box bigger */
+        padding: 0.5rem;
+        /* the border radiusof the small white text boxes */
+        border-radius: 0.25rem;
+        /* make the border color a css var */
+        border: 1px solid grey;
+        /* gives more space to the right of the contact me box */
+        margin-right: 2rem;
+      }
+      /* The name of the message area */
+      .message-area {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+      }
+      /* message box */
+      .message {
+        /* make the box for the message longer */
+        height: 16rem;
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
 
-              /* nav */
-              /* default setting */
+      /* the button */
+      .btn_bar {
+        margin-top: 1rem;
+        display: flex;
+        /* brings the button from left to the right */
+        flex-direction: row-reverse;
+      }
 
-              *{
-                  box-sizing: border-box;
-              }
+      .btn-dark {
+        width: 100%;
+        border-radius: 0.5rem;
+        /* makes the size of the button bigger */
+        padding: 0.5rem;
+        background-color: var(--c-bg-btn);
+      }
 
-              html, body{
-                  margin: 0;
-                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                  background-color: burlywood;
-              }
+      .btn-dark:hover {
+        background-color: var(--c-btn-hover);
+      }
 
-              /* header and navigation bar during desktop mode */
+      #tech h1 {
+        font-family: var(--ff-heading);
+      }
+      /* changing the font of all the smaller names */
+      body#tech,
+      body#tech button,
+      body#tech input,
+      body#tech textarea {
+        font-family: var(--f-body);
 
-              header{
-                  width: 100%;
-                  padding: 0;
-                  height: 100px;
-                  background-color: violet;
-                  overflow-y: hidden;
-                  top: 0;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                  z-index: 10px;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  align-items: center;
-                  background: url('../Home_Page/img/waterpattern.webp');
-                  position: relative;
-                  }
+        /* The nav bar */
 
-              /* header edits */
+        header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          background-image: url(../Home_Page/img/waterpattern.webp);
+          padding: 0.2rem;
+          position: relative;
+          height: 5rem;
+        }
 
-              .top_nav h1{
-                  padding: 10%;
-              }
-
-              h1 {
-                  color: #333;
-                  font-size: 30px;
-              }
-
-              /* nav bar */
-
-              #main_nav ul{
-                  margin: 0;
-                  display: flex;
-                  list-style-type: none;
-                  text-align: none;
-                  background-color: rgba(40,40,40,0.5);
-              }
-
-              #main_nav li{
-                  font-size: 10px;
-                  height: 50px;
-                  min-width: 100px;
-                  line-height: 50px;
-              }
-
-              #main_nav a{
-                  text-decoration: none;
-                  color: #333;
-                  display: block;
-                  transition: 1s;
-                  font-size: 20px;
-              }
-
-              #main_nav a:hover{
-                  background-color: rgba(40,40,40,0.5);
-                  color: white;
-              }
-
-              #main_nav a:active{
-                  background-color: 40,40,40,0.5;
-                  color: white;
-              }
-
-              /* Bottom navigation */
-
-              .bottom_nav ul{
-                  margin: 0;
-                  display: flex;
-                  list-style-type: none;
-                  text-align: center;
-                  justify-content: space-evenly;
-                  align-items: center;
-                  background: url("../Home_Page/img/waterpattern.webp");
-              }
-
-              .bottom_nav li{
-                  font-size: 10px;
-                  height: 50px;
-                  min-width: 100px;
-                  line-height: 50px;
-              }
-
-      .bottom_nav a{
-          text-decoration: none;
-          color: #333;
+        /* logo */
+        .name {
+          margin: 0;
+          font-weight: 300;
+          color: blueviolet;
+        }
+        /* links and url */
+        .menu {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          height: 2rem;
+        }
+        /* preven the li width from being smaller than 5rem */
+        .menu li {
+          min-width: 10rem;
+          font-size: 2rem;
+        }
+        /* deeper links */
+        .menu li a {
           display: block;
+          color: black;
+          height: 2rem;
+          align-content: center;
+          text-decoration: none;
           transition: 1s;
-          font-size:20px ;
-      }
+        }
+        /* hover effect */
 
-      .bottom_nav a:hover{
-          background-color:rgba(40,40,40,0.5) ;
+        .menu li a:hover {
           color: white;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* bottom nav bar */
+
+        .bottom_nav {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          background-image: url(../Home_Page/img/waterpattern.webp);
+          padding: 0 2rem;
+          position: relative;
+        }
+
+        /* link color */
+        .bottom_nav a {
+          color: black;
+          text-decoration: none;
+        }
+
+        .bottom_menu {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .bottom_menu li {
+          min-width: 13rem;
+          font-size: 2rem;
+        }
+
+        .bottom_menu a {
+          display: block;
+          padding: 1rem;
+        }
+
+        .bottom_menu a:hover {
+          color: #eee;
+          background-color: rgba(0, 0, 0, 0.3);
+          color: rgba(0, 0, 0, 0.3);
+        }
+        /* media quaries */
+        /* tablet mode*/
+        @media screen and (max-width: 1024px) {
+          header {
+            height: 10rem;
+            color: blue;
+          }
+        }
       }
 
-
-      .bottom_nav a:active{
-          background-color: rgba(40,40,40,0.5);
-          color: white;
-      }
-
-      /* Tablet */
-
-      @media screen and (max-width: 1024px){
-          body{
-              background-color: burlywood;
-          }
-
-
-          /* Navigation bar */
-
-          /* Top nav */
-          .top_nav{
-              height: 60px;
-          }
-
-          .top_nav h1{
-              font-size: 1.5rem;
-              width: 10rem;
-          }
-
-          #main_nav ul{
-              width: 100%;
-              flex-direction: row;
-          }
-
-          #main_nav li{
-              min-width: 5rem;
-          }
-
-          #main_nav a{
-
-              text-align:center;
-          }
-
-          /* bottom nav */
-          .bottom_nav{
-              position:absolute;
-              width: 100%;
-          }
-
-          #second_nav ul{
-              width: auto;
-              align-items: center;
-              padding: 0;
-          }
-
-          #second_nav li{
-              /* min-width: center; */
-              padding-left: 0;
-              padding-right: 0;
-              justify-content: space-evenly;
-              text-align: center;
-          }
-
-          #second_nav a{
-              font-size: 10px;
-              justify-items:left ;
-          }
-      }
-
-      @media screen and (max-width: 768px){
-
-      /* bottom navigation */
-
-      .bottom-nav{
-          width: 100%;
-          position: absolute;
-      }
-
-      #second_nav a{
-          justify-items: left;
-      }
-
-      }
+      /* CSS Variables Default */
     </style>
     <script type="text/javascript"></script>
   </head>
   <body id="tech">
     <header class="top_nav">
-      <h1>Harry Wu</h1>
+      <h1 class="name">Harry Wu</h1>
       <nav id="main_nav">
-        <ul>
+        <ul class="menu">
           <li><a href="../Home_Page/library.html">Home</a></li>
           <li><a href="#" class="home">Projects</a></li>
           <li><a href="#" class="home">Resume</a></li>
@@ -330,7 +260,7 @@
           ></textarea>
         </div>
 
-        <dive class="button-bar">
+        <dive class="btn_bar">
           <button class="btn-dark" type="submit">Send</button>
         </dive>
         <input
@@ -343,7 +273,7 @@
 
     <div class="bottom_nav">
       <nav id="second_nav">
-        <ul>
+        <ul class="bottom_menu">
           <li><a href="../Home_Page/library.html" class="home">Home</a></li>
           <li><a href="#" class="home">Projects</a></li>
           <li><a href="#" class="home">Resume</a></li>

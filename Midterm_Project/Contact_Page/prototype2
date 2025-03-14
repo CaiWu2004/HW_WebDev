@@ -1,3 +1,4 @@
+    <style type="text/css">
               /* fonts imported from google */
               @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
               .press-start-2p-regular {
@@ -120,7 +121,7 @@
                   flex-direction: row;
                   justify-content: space-between;
                   align-items: center;
-                  background: url('../WebDevClassFile/HW_WebDev/Midterm_Project/Home_Page/img/waterpattern.webp');
+                  background: url('../Home_Page/img/waterpattern.webp');
                   position: relative;
                   }
 
@@ -179,7 +180,7 @@
                   text-align: center;
                   justify-content: space-evenly;
                   align-items: center;
-                  background: url("../WebDevClassFile/HW_WebDev/Midterm_Project/Home_Page/img/waterpattern.webp");
+                  background: url("../Home_Page/img/waterpattern.webp");
               }
 
               .bottom_nav li{

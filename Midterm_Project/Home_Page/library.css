@@ -35,6 +35,11 @@ header {
   margin: 0;
   font-weight: 300;
   color: blueviolet;
+  text-decoration: none;
+}
+
+.top_nav a {
+  text-decoration: none;
 }
 
 /* The hamburger is being edited here:
@@ -106,45 +111,50 @@ don't display it in home page */
   display: none;
 }
 
-/* Bottom Nav Bar */
-
+/* Bottom Nav Bar
 .bottom_nav {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-image: url(./img/waterpattern.webp);
-  padding: 0 2rem;
-  position: relative;
+  gap: 8rem;
+  background: burlywood;
 }
+.bt_menu a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid purple;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem;
+  transition: 0.3s ease;
+  color: black;
+} */
 
-/* change the color of the links */
 .bottom_nav a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid purple;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: -2rem 3rem 3rem;
+  transition: 0.3s ease;
   color: black;
   text-decoration: none;
 }
 
-.bt_menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.bt_menu li {
-  min-width: 10rem;
-}
-
-.bt_menu a {
-  display: block;
-  padding: 1rem;
-}
-
-.bt_menu a:hover {
-  color: #eee;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: rgba(0, 0, 0, 0.3);
+.bottom_nav a:hover {
+  color: burlywood;
+  transform: scale(1.3) translateY(-5px);
+  background-color: blue;
+  box-shadow: 0 0 25px blue;
 }
 
 /* media queries */
@@ -160,12 +170,18 @@ don't display it in home page */
   }
   /* logo name change the size when in tablet mmode */
   .name {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .top_nav a {
+    text-decoration: none;
   }
 
   .menu li {
     /* How spread out the links are */
-    min-width: 9rem;
+    min-width: 8rem;
     /* the size of the words */
     font-size: 2rem;
   }
@@ -177,16 +193,6 @@ make it take more space */
     padding-bottom: 4rem;
   }
 
-  /* bottom nav */
-
-  .bottom_nav {
-    height: 6rem;
-  }
-
-  .bt_menu li {
-    min-width: 10rem;
-    font-size: 3rem;
-  }
   /* image being shown */
   #desktop {
     display: none;
@@ -221,6 +227,10 @@ left to right */
   .name {
     margin: 3.5rem;
     font-size: 3rem;
+  }
+
+  .top_nav a {
+    text-decoration: none;
   }
 
   /* hamgurger sign ||| */
@@ -262,8 +272,7 @@ left to right */
   }
 
   .container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 8rem;
     flex-direction: column;
   }
 
@@ -272,10 +281,6 @@ left to right */
   }
 
   /* This is an issue, the bottom nav not showing */
-  .bt_menu {
-    display: block;
-  }
-
   /* only added/removed aka toggles via JS */
 
   .show {

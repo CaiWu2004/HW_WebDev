@@ -7,18 +7,18 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <script type="text/javascript">
       //listen for the page to load
-      document.addEventListener('DOMContentLoader', function () {
+      document.addEventListener("DOMContentLoader", function () {
         //store the hamburger icon as a varible of hamburger
-        const hamburger = document.getElementById('hamburger')
+        const hamburger = document.getElementById("hamburger");
         //add a click event listener to our hamburger menu icon that calls our toggle menu function
-        hamburger.addEventListener('click', toggleMenu)
-      })
-      
+        hamburger.addEventListener("click", toggleMenu);
+      });
+
       //write a function that grabs our nav bt ID and applies the class .show
       function toggleMenu() {
         //grab the nav element by it's id and add/remove the class .show
-        const navigation = document.getElementById('main-nav')
-        navigation.classList.toggle('show')
+        const navigation = document.getElementById("main-nav");
+        navigation.classList.toggle("show");
       }
     </script>
   </head>
@@ -26,10 +26,10 @@
     <header>
       <h1 class="brand"><a href="#">Logo</a></h1>
       <!-- Hide this on destop and show on mobile -->
-       <!-- HTML Entity = starts with & end with ; 
+      <!-- HTML Entity = starts with & end with ; 
         with a code in the middle to load a special entity -->
-       <span class="mobile-menu" id="hamburger">&#8801;</span>
-       <nav id="main-nav">
+      <span class="mobile-menu" id="hamburger">&#8801;</span>
+      <nav id="main-nav">
         <ul class="menu">
           <li><a href="#">Link 1</a></li>
           <li><a href="#">Link 2</a></li>
@@ -38,7 +38,7 @@
           <li><a href="#">Link 5</a></li>
           <li><a href="#">Link 6</a></li>
         </ul>
-       </nav>
+      </nav>
     </header>
 
     <main class="container">
@@ -65,8 +65,6 @@
       <div class="thumb">
         <img src="./img/Hen-678x1024.webp" />
       </div>
-
     </main>
-
   </body>
 </html>
