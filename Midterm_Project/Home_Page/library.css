@@ -1,12 +1,13 @@
-/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+/* Global Styles */
 * {
   box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 body {
   margin: 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: burlywood;
 }
 
@@ -16,8 +17,6 @@ img {
 }
 
 /* Desktop First Design */
-
-/* keeps the header in place and respond depending on the screen size*/
 header {
   display: flex;
   flex-direction: row;
@@ -26,125 +25,82 @@ header {
   background-image: url(./img/waterpattern.webp);
   padding: 0.2rem;
   position: relative;
-  /* increase the height of the nav bar */
   height: 4.5rem;
 }
 
-/* logo:Harry Wu */
 .name {
   margin: 0;
   font-weight: 300;
   color: blueviolet;
   text-decoration: none;
+  padding-left: 3rem;
+  font-size: 3rem;
 }
 
 .top_nav a {
   text-decoration: none;
 }
 
-/* The hamburger is being edited here:
-don't display it in home page */
 .home_page {
   display: none;
 }
 
-/* links or the ul box */
 .menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: row;
-  /* increase the box the nav links 
-  are in, the height increases but 
-  the nav links dont */
   height: 2rem;
 }
 
-/* prevent the li  wdith from being smaller than 5rem */
 .menu li {
   min-width: 10rem;
   font-size: 2rem;
 }
 
-/* working on the links: a, deeper within the li */
 .menu li a {
   display: block;
   color: black;
-  /* background-color: rgba(0, 0, 0, 0.3); */
   height: 2rem;
-  /* get the items in the box to align in the center base ont he y-axis */
-  align-content: center;
   text-decoration: none;
   transition: 1s;
 }
 
-/* hover effect */
 .menu li a:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Image */
-
 .container {
-  /* the padding/having space around the image not connected to the nav */
   padding: 1.5rem;
   display: flex;
-  /* get it to display from top to bottom instead of left to right */
   flex-direction: column;
-  /* weather the item is in one line or multiple lines */
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/* show desktop img */
+
 #desktop {
   height: auto;
   display: block;
 }
-/* hide ipad img */
-#tablet {
-  display: none;
-}
-/* hide mobile inm while in desktop mode */
+/* the images are different depending on the screen size */
+#tablet,
 #mobile {
   display: none;
 }
-
-/* Bottom Nav Bar
-.bottom_nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
-  background: burlywood;
-}
-.bt_menu a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background-color: transparent;
-  border: 0.2rem solid purple;
-  font-size: 2rem;
-  border-radius: 50%;
-  margin: 3rem 1.5rem 3rem;
-  transition: 0.3s ease;
-  color: black;
-} */
 
 .bottom_nav a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   background-color: transparent;
   border: 0.2rem solid purple;
   font-size: 2rem;
   border-radius: 50%;
-  margin: -2rem 3rem 3rem;
+  margin: 2rem 3rem 3rem;
   transition: 0.3s ease;
   color: black;
   text-decoration: none;
@@ -157,43 +113,32 @@ don't display it in home page */
   box-shadow: 0 0 25px blue;
 }
 
-/* media queries */
-
+/* Media Queries */
 @media screen and (max-width: 1024px) {
-  body {
-    background-color: burlywood;
-  }
-  /* the box the top nav is in whould be longer */
   header {
     height: 10rem;
-    color: blueviolet;
   }
-  /* logo name change the size when in tablet mmode */
+
   .name {
     font-size: 3rem;
     padding-right: 1rem;
     padding-left: 1rem;
   }
 
-  .top_nav a {
-    text-decoration: none;
-  }
-
   .menu li {
-    /* How spread out the links are */
     min-width: 8rem;
-    /* the size of the words */
     font-size: 2rem;
   }
 
-  /* image padding top and bottom 
-make it take more space */
   .container {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 
-  /* image being shown */
+  .bottom_nav {
+    margin-left: rem;
+  }
+
   #desktop {
     display: none;
   }
@@ -205,18 +150,8 @@ make it take more space */
   }
 }
 
-/* phone screen edit */
-
 @media screen and (max-width: 768px) {
-  body {
-    /* background-color: burlywood; */
-  }
-
-  /* change the way the links in the 
-nav bar is position. From
-left to right */
   header {
-    /* height: 20rem; */
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
@@ -226,43 +161,57 @@ left to right */
 
   .name {
     margin: 3.5rem;
+    padding-left: 5rem;
     font-size: 3rem;
   }
 
-  .top_nav a {
-    text-decoration: none;
-  }
-
-  /* hamgurger sign ||| */
   .home_page {
     display: block;
     position: absolute;
-    /* brought the sign down */
-    top: 2rem;
-    /* move it to the right */
-    right: 1rem;
+    top: 1.9rem;
+    left: 1rem;
     color: black;
     font-size: 4rem;
     cursor: pointer;
   }
-  /* Editing the nav links */
+
   .menu {
-    /* background-color: grey; */
+    position: relative;
     flex-direction: column;
     width: 100%;
-    background-color: white;
+    top: -1rem;
+    background: url(./img/waterpattern.webp);
+    background-size: cover;
+    background-position: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
   }
 
   .menu li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
+    padding: 10px;
+    background: inherit;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 11;
   }
 
-  /* img */
-  #desktop {
-    display: none;
+  .bottom_nav {
+    padding-left: 3rem;
   }
 
+  .bottom_nav a {
+    margin-top: -1rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+
+    width: 4rem;
+    height: 4rem;
+  }
+
+  #desktop,
   #tablet {
     display: none;
   }
@@ -272,16 +221,13 @@ left to right */
   }
 
   .container {
-    padding-top: 8rem;
+    padding-top: 5rem;
     flex-direction: column;
   }
 
   nav {
     display: none;
   }
-
-  /* This is an issue, the bottom nav not showing */
-  /* only added/removed aka toggles via JS */
 
   .show {
     display: block;

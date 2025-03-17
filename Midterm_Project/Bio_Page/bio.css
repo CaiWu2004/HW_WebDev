@@ -5,8 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  border: none;
-  outline-color: none;
   font-family: "Press Start 2P", sans-serif;
 }
 
@@ -23,14 +21,12 @@ body {
 }
 
 header {
-  margin-top: 20px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 1rem 9%;
   background-color: transparent;
-  filter: drop-shadow(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +41,7 @@ header {
   transition: 0.5s ease;
 }
 
-.logo :hover {
+.logo:hover {
   transform: scale(1.1);
 }
 
@@ -63,7 +59,13 @@ nav a:active {
   color: blueviolet;
   border-bottom: 3px solid blueviolet;
 }
+
 @media (max-width: 768px) {
+  .logo {
+    padding-left: 10rem;
+    margin-top: 5rem;
+    font-size: 4.5rem;
+  }
   nav {
     position: absolute;
     display: none;
@@ -73,9 +75,8 @@ nav a:active {
     border-left: 3px solid blueviolet;
     border-bottom: 3px solid blueviolet;
     border-bottom-left-radius: 2rem;
-    padding: 1rem solid;
+    padding: 1rem;
     background-color: black;
-    border-top: 0.1re, solid rgba(0, 0, 0, 0.2);
   }
 
   nav.active {
@@ -131,7 +132,6 @@ span {
 }
 
 .home-img img {
-  position: relative;
   width: 32vw;
   border-radius: 50%;
   box-shadow: 0 0 25px solid;
@@ -154,7 +154,7 @@ span {
   border: 0.2rem solid purple;
   font-size: 2rem;
   border-radius: 50%;
-  margin: 3rem 1.5rem 3rem;
+  margin: 3rem 1.5rem;
   transition: 0.3s ease;
   color: black;
 }
@@ -195,8 +195,20 @@ span {
     margin-top: 4rem;
   }
 
+  .logo {
+    margin-left: -6rem;
+    padding-right: 4rem;
+  }
+
+  nav {
+    margin-left: -7rem;
+  }
+
   nav a {
     margin-top: 4rem;
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 
   .home-content {
@@ -219,5 +231,14 @@ span {
     width: 40vh;
     margin-top: 6rem;
     border-radius: 25%;
+  }
+
+  .home_page {
+    display: block;
+    position: absolute;
+    top: 1.9rem;
+    color: black;
+    font-size: 5rem;
+    cursor: pointer;
   }
 }
