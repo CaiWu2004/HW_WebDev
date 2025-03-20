@@ -1,284 +1,329 @@
-              /* fonts imported from google */
-              @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-              .press-start-2p-regular {
-                  font-family: "Press Start 2P", system-ui;
-                  font-weight: 400;
-                  font-style: normal;
-              }
-              /* CSS Variables Default */
+/* fonts imported from google */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      } */
+:root {
+  --c-bg: #e2e8f0;
+  --c-text: #475569;
+  --c-bg-btn: #1e293b;
+  --c-btn-hover: #64748b;
+  --c-btn-text: #f8fafc;
+  --ff-heading: "Press Start 2P", system-ui;
+}
 
-              :root{
-                  --c-bg: #e2e8f0;
-                  --c-text: #475569:
-                  --c-bg-btn: #1e293b;
-                  --c-btn-hover: #64748b;
-                  --c-btn-text: #f8fafc;
-                  --ff-heading:"Press Start 2P", system-ui:
-                  --ff-body:"Press Start 2P", system-ui;
-              }
-              /* Apply different IDs for Different Themes */
-              #blue{
-                  --c-bg:#1e3a8a;
-                  --c-text:#dbeafe;
-                  --c-bg-btn:#3b82f6;
-                  --c-btn-hover:#1d4ed8;
-                  --c-btn-text: #eff6ff;
-              }
+/* Apply different IDs for Different Color Themes */
 
-              /* Base Styles */
-              body{
-                  font-family:  Helvetica, Arial, sans-serif;
-              }
-              .container{
-                  width: 50%;
-                  margin: 0 auto;
-                  border-radius: 0.5rem;
-                  padding: 2rem;
-                  color: var(--c-text);
-                  background: var(--c-bg);
-              }
-              .row{
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: flex-start;
-                  align-items: flex-start;
-              }
+#blue {
+  --c-bg: #1e3a8a;
+  --c-text: #dbeafe;
+  --c-bg-btn: #3b82f6;
+  --c-btn-hover: #1d4ed8;
+  --c-btn-text: #eff6ff;
+}
 
-              .label-lg{
-                  font-size: 2rem;
-              }
+/* Base styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: burlywood;
+}
 
-              .input-lg{
-                  padding: 0.5rem;
-                  border-radius: 0.25rem;
-                  /* add css bar for color here */
-                  border: 1px solid grey;
-                  margin-right: 2rem;
-              }
-              .message-area{
-                  display: flex;
-                  flex-direction: column;
-                  margin-top: 2rem;
-                  font-size: 2rem;
-              }
-              .message{
-                  height: 16rem;
-                  border-radius: 0.25rem;
-                  padding: 1rem;
-              }
-              .button-bar{
-                  display: flex;
-                  flex-direction: row-reverse;
-                  margin-top: 2rem;
-              }
-              .btn-dark{
-                  width: 100%;
-                  border-radius: 0.5rem;
-                  padding: 1rem;
-                  background-color: var(--c-bg-btn);
-                  color: var(--c-btn-text);
-                  border: 1px solid var(--c-btn-text);
-              }
-              .btn-dark:hover{
-                  background-color: var(--c-btn-hover);
-              }
-              /* Font varians by changing the ID on the Body tag */
-              #tech h1 {
-                  font-family:var(--ff-heading);
-              }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-              body#tech{
-                  font-family: var(--ff-body);
-              }
+/* The message me container */
+.container {
+  flex-grow: 1; /* Stretches to fill available space */
+  min-height: 80%; /* Full screen height */
+  width: 50%;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-              /* nav */
-              /* default setting */
+.container h1 {
+  font-size: 3rem;
+  line-height: 1.5;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  text-align: center;
+}
 
-              *{
-                  box-sizing: border-box;
-              }
+/* Name, Email, Number section */
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-              html, body{
-                  margin: 0;
-                  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                  background-color: burlywood;
-              }
+.label-lg {
+  font-size: 1.3rem;
+}
 
-              /* header and navigation bar during desktop mode */
+.input-lg {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid grey;
+  margin-right: 2rem;
+}
 
-              header{
-                  width: 100%;
-                  padding: 0;
-                  height: 100px;
-                  background-color: violet;
-                  overflow-y: hidden;
-                  top: 0;
-                  margin-top: 0;
-                  margin-bottom: 0;
-                  z-index: 10px;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  align-items: center;
-                  background: url('../WebDevClassFile/HW_WebDev/Midterm_Project/Home_Page/img/waterpattern.webp');
-                  position: relative;
-                  }
+.message-area {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
 
-              /* header edits */
+.message {
+  height: 16rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
 
-              .top_nav h1{
-                  padding: 10%;
-              }
+/* The button */
+.btn_bar {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
 
-              h1 {
-                  color: #333;
-                  font-size: 30px;
-              }
+.btn-dark {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--c-bg-btn);
+}
 
-              /* nav bar */
+.btn-dark:hover {
+  background-color: var(--c-btn-hover);
+}
 
-              #main_nav ul{
-                  margin: 0;
-                  display: flex;
-                  list-style-type: none;
-                  text-align: none;
-                  background-color: rgba(40,40,40,0.5);
-              }
+#tech h1 {
+  font-family: var(--ff-heading);
+}
 
-              #main_nav li{
-                  font-size: 10px;
-                  height: 50px;
-                  min-width: 100px;
-                  line-height: 50px;
-              }
+body#tech {
+  font-family: var(--f-body);
+}
 
-              #main_nav a{
-                  text-decoration: none;
-                  color: #333;
-                  display: block;
-                  transition: 1s;
-                  font-size: 20px;
-              }
+/* The nav bar */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+  min-height: 7rem;
+}
 
-              #main_nav a:hover{
-                  background-color: rgba(40,40,40,0.5);
-                  color: white;
-              }
+.mobile-menu {
+  display: none;
+}
 
-              #main_nav a:active{
-                  background-color: 40,40,40,0.5;
-                  color: white;
-              }
+/* logo */
+.name {
+  margin: 0;
+  font-weight: 100;
+  font-size: 2rem;
+  color: blueviolet;
+}
 
-              /* Bottom navigation */
+/* links and url */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  align-items: center;
+}
 
-              .bottom_nav ul{
-                  margin: 0;
-                  display: flex;
-                  list-style-type: none;
-                  text-align: center;
-                  justify-content: space-evenly;
-                  align-items: center;
-                  background: url("../WebDevClassFile/HW_WebDev/Midterm_Project/Home_Page/img/waterpattern.webp");
-              }
+.menu li {
+  min-width: 10rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
 
-              .bottom_nav li{
-                  font-size: 10px;
-                  height: 50px;
-                  min-width: 100px;
-                  line-height: 50px;
-              }
+.menu li a {
+  display: block;
+  color: black;
+  height: 2rem;
+  text-decoration: none;
+  transition: 1s;
+}
 
-      .bottom_nav a{
-          text-decoration: none;
-          color: #333;
-          display: block;
-          transition: 1s;
-          font-size:20px ;
-      }
+.menu li a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
-      .bottom_nav a:hover{
-          background-color:rgba(40,40,40,0.5) ;
-          color: white;
-      }
+/* bottom nav bar */
 
+.bottom_nav {
+  margin: 0 17rem 3rem;
+}
+.bottom_nav a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 0.2rem solid purple;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 2rem 2rem 3rem; /* top / left-right-center/ bottom*/
+  transition: 0.3s ease;
+  color: black;
+  text-decoration: none;
+}
 
-      .bottom_nav a:active{
-          background-color: rgba(40,40,40,0.5);
-          color: white;
-      }
+.bottom_nav a:hover {
+  color: burlywood;
+  transform: scale(1.3) translateY(-5px);
+  background-color: blue;
+  box-shadow: 0 0 25px blue;
+}
+/* Media Queries */
 
-      /* Tablet */
+/* tablet mode */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 80%;
+  }
 
-      @media screen and (max-width: 1024px){
-          body{
-              background-color: burlywood;
-          }
+  .message {
+    font-size: 2rem;
+  }
 
+  .top_nav {
+    height: 10rem;
+  }
 
-          /* Navigation bar */
+  .name {
+    padding: 0;
+    font-size: 30px;
+    margin-left: -1rem;
+  }
 
-          /* Top nav */
-          .top_nav{
-              height: 60px;
-          }
+  .menu li {
+    min-width: 2rem;
+    margin: 5px;
+    font-size: 2rem;
+  }
 
-          .top_nav h1{
-              font-size: 1.5rem;
-              width: 10rem;
-          }
+  .bottom_nav {
+    margin: 0 1rem 3rem;
+  }
 
-          #main_nav ul{
-              width: 100%;
-              flex-direction: row;
-          }
+  nav {
+    display: block;
+  }
+}
 
-          #main_nav li{
-              min-width: 5rem;
-          }
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 20px;
+    padding: 20px;
+    width: 80%;
+  }
 
-          #main_nav a{
+  .container h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
 
-              text-align:center;
-          }
+  .message {
+    font-size: 1.2rem;
+  }
 
-          /* bottom nav */
-          .bottom_nav{
-              position:absolute;
-              width: 100%;
-          }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+  }
 
-          #second_nav ul{
-              width: auto;
-              align-items: center;
-              padding: 0;
-          }
+  .name {
+    min-height: 5rem;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-          #second_nav li{
-              /* min-width: center; */
-              padding-left: 0;
-              padding-right: 0;
-              justify-content: space-evenly;
-              text-align: center;
-          }
+  .mobile-menu {
+    display: block;
+    position: relative;
+    top: -7rem;
+    color: black;
+    font-size: 5rem;
+    cursor: pointer;
+  }
 
-          #second_nav a{
-              font-size: 10px;
-              justify-items:left ;
-          }
-      }
+  .menu {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    top: -5.9rem;
+    background: url(../WebDevClassFile/HW_WebDev/Midterm_Project/Home_Page/img/waterpattern.webp);
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 
-      @media screen and (max-width: 768px){
+  .menu li {
+    text-align: center;
+    padding: 20px;
+    background: inherit;
+    margin: 0;
+  }
 
-      /* bottom navigation */
+  .bottom_nav {
+    margin: 0 0 0;
+  }
 
-      .bottom-nav{
-          width: 100%;
-          position: absolute;
-      }
+  nav {
+    display: none;
+  }
 
-      #second_nav a{
-          justify-items: left;
-      }
+  .show {
+    display: block;
+  }
 
-      }
+  .bottom_nav {
+    padding-left: 3rem;
+  }
+
+  .bottom_nav a {
+    margin-top: -1rem;
+    margin-left: 2rem;
+    margin-right: 5rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}

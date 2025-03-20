@@ -3,8 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="./css/project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="text/javascript">
+      //       // listen for the page to load
+      //   document.addEventListener("DOMContentLoaded", function () {
+      //   // store the hamburger icon as a varible of hamburger
+      //   const hamburger = document.getElementById("hamburger");
+      //   // add a click event listener to our hamburger menu icon that calls out toggle menu function
+      //   hamburger.addEventListener("click", toggleMenu);
+      //   });
+
+      //   // write a function that grabs our nav bt ID and applies the class .show
+      //   function toggleMenu() {
+      //     // grab the new element by it's id and add/remove the class .show
+      //   const navbar = document.getElementById("main_nav");
+      //   navbar.classList.toggle("show");
+      //  }
+
+      document.addEventListener("DOMContentLoaded", function (){
+        const phoneNav = document.querySelector(".phone_nav ");
+        const mainNav = document.querySelector(".main_nav");
+
+        phoneNav.addEventListener("click", function (){
+          mainNav.classList.toggle("show");
+        });
+      });
+    </script>
   </head>
-  <body></body>
+  <body>
+    <header class="top_nav">
+      <h1 class="name_nav"><a href="../Home_Page/library.html">Harry Wu</a></h1>
+      <span class="phone_nav" id="hamburger">&#8801;</span>
+      <nav class="main_nav">
+        <a href="./project.html" class="home">Projects</a>
+        <a href="#" class="home">Resume</a>
+        <a href="../../../../Contact-C/contact_me copy.html" class="home">Contact</a>
+        <a href="../Bio_Page/bio.html" class="home">Bio</a>
+      </nav>
+    </header>
+    <!-- containers holding the projects -->
+    <div class="containers">
+      <h2>Videos:</h2>
+      <div class="videos01">
+        <video
+          controls
+          src="./img2/Continutiy Editing Resubmission.mp4"
+          width="500"
+          alt="Continuity"
+        ></video>
+        <article class="text">
+          <h3>The Journey:</h3>
+          <p>
+            Duis pharetra porta orci, ac lobortis leo congue eu. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Fusce in massa eros. Ut at tellus vel nunc suscipit
+            feugiat. Orci varius natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Maecenas varius sed sem non
+            molestie. Nunc cursus lectus eu turpis pharetra mollis. Proin id
+            faucibus justo.
+          </p>
+        </article>
+      </div>
+
+      <div class="videos02">
+        <video
+          controls
+          src="./img2/Should_You_Be_Trapped_In_A_Windless_Land.mp4"
+          width="500"
+          alt="Poem"
+        ></video>
+        <article class="text">
+          <h3>Windless Land:</h3>
+          <p>
+            Duis pharetra porta orci, ac lobortis leo congue eu. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Fusce in massa eros. Ut at tellus vel nunc suscipit
+            feugiat. Orci varius natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Maecenas varius sed sem non
+            molestie. Nunc cursus lectus eu turpis pharetra mollis. Proin id
+            faucibus justo.
+          </p>
+        </article>
+      </div>
+
+      <div class="videos03">
+        <video
+          controls
+          src="./img2/Montage_Wu_Harry.mp4"
+          width="500"
+          alt="Montage" 
+        ></video>
+        <article class="text">
+          <h3>Turning 18:</h3>
+          <p>
+            Duis pharetra porta orci, ac lobortis leo congue eu. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Fusce in massa eros. Ut at tellus vel nunc suscipit
+            feugiat. Orci varius natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Maecenas varius sed sem non
+            molestie. Nunc cursus lectus eu turpis pharetra mollis. Proin id
+            faucibus justo.
+          </p>
+        </article>
+      </div>
+    </body>
+
+    <h2>Images:</h2>
+    <div class="container2">
+      <div class="img_pattern1">
+        <img src="./img2/pattern_1.png" />
+        <article>
+          <p>
+            Duis pharetra porta orci, ac lobortis leo congue eu. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Fusce in massa eros. Ut at tellus vel nunc suscipit
+            feugiat. Orci varius natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Maecenas varius sed sem non
+            molestie. Nunc cursus lectus eu turpis pharetra mollis. Proin id
+            faucibus justo.
+          </p>
+          <a href="#">See for yourself!</a>
+        </article>
+      </div>
+
+      <div class="img_pattern2">
+        <img src="./img2/patter_3.png" />
+        <article>
+          <p>
+            Duis pharetra porta orci, ac lobortis leo congue eu. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac
+            turpis egestas. Fusce in massa eros. Ut at tellus vel nunc suscipit
+            feugiat. Orci varius natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Maecenas varius sed sem non
+            molestie. Nunc cursus lectus eu turpis pharetra mollis. Proin id
+            faucibus justo.
+          </p>
+          <a href="#">See for yourself!</a>
+        </article>
+      </div>
+    </div>
+      <!-- icons at the bottom -->
+      <div class="bottom_nav">
+        <a
+          href="https://www.linkedin.com/in/harry-wu-7306bb28a/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/CaiWu2004/HW_WebDev.git" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://x.com/wucai519844834?s=11&t=YhKrcSp6wcUdxtgD_Rv9Nw"
+          target="_blank"
+          ><i class="fa-brands fa-square-x-twitter"></i
+        ></a>
+        <a href="http://www.youtube.com/@dragonqueen_ice5918" target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/caiwu2004?igsh=YTVndmk3eHV5bTRw&utm_source=qr"
+          target="_blank"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+      </div>
+    </div>
+  </body>
 </html>
