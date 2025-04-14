@@ -1,0 +1,47 @@
+.calculator {
+  background-color: aliceblue;
+  border: 2px solid grey;
+  border-radius: 25px;
+  height: 50%;
+  width: 50%;
+  margin: 12rem;
+}
+
+#nameHead {
+  margin-left: 110px;
+  font-size: 2rem;
+}
+
+label {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+input {
+  height: 2rem;
+  border-radius: 10px;
+}
+
+button {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+button:hover {
+  background-color: aqua;
+  color: white;
+}
+
+.taxesOutput {
+  border: 5px solid grey;
+  border-radius: 25px;
+  background-color: aquamarine;
+  color: black;
+  width: 250px;
+  height: 150px;
+  padding-top: 50px;
+  margin: 10px;
+  margin-left: 60px;
+  font-size: 2rem;
+}
