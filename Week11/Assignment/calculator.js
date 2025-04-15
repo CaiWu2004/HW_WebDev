@@ -31,7 +31,7 @@ btn.onclick = function () {
   }
 
   function IRS(income, rate) {
-    var tax_income = income * (rate / 100);
+    var tax_income = Math.ceil((income * rate) / 100);
     return tax_income;
   }
 
