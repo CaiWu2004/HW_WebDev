@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geolocation</title>
+    <script type="text/javascript">
+      // declare a global variable for out location div
+      let loc;
+      document.addEventListener("DOMContentLoaded", () => {
+        loc = document.getElementById("location");
+        getLocation();
+      });
+
+      // function getLoction () {}
+      const getLocation = () => {
+        // we need to check if we can get the location
+        if (navigator.geolocation && navigator.geolocation.getCurrentPosition) {
+          // we just checked to see if geolocatione xists using dot notation
+          // once we have it, it will be passed to a callback function that we also write
+          // the 2 param or argument are (callback function to pass the location info into, a error function)
+          navigator.geolocation.getCurrentPosition(setPosition, showError);
+        } else {
+          // this will fire if we don't have access to geoloaction or the getCurrentPosition
+          // we need to display a message to the user
+          alert(
+            "Youyr browser either does not support geolocation, OR you did not allow it."
+          );
+        }
+      };
+
+      // once we call getCurrentPosition, it will pass a position object to setPosition since we pass that
+      // in as the callback function
+      const setPosition = (position) => {
+        const lat = position.coords.latitude;
+        const long = position.coords.longitude;
+
+        loc.innerHTML = `<p>Latitude: ${lat} <br />Longitude: ${long}</p> `;
+      };
+
+      const showError = () => {
+        // console.log("error");
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            loc.innerHTML = `User denied the request for geoloaction`;
+            break;
+          case error.POSITION_UNAVALIBLE:
+            loc.innerHTML = `The loaction info is not avalible.`;
+            break;
+          case error.TIMEOUT:
+            loc.innerHTML = `The location request timed out.`;
+            break;
+          case error.UNKNOWN_ERROR:
+            loc.innerHTML = `An Unknown Error Occured`;
+            break;
+          default:
+            loc.innerHTML = `An Unknown Error Occured`;
+            break;
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="location">
+      <p>Currently Searching for Location...</p>
+    </div>
+  </body>
+</html>
