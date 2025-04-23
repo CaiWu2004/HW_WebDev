@@ -1,3 +1,11 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: gray;
+}
+
 /* top nav bar */
 
 .navbar-brand {
@@ -11,11 +19,11 @@
 }
 
 .nav-link:hover {
-  color: #ccc;
+  color: black;
 }
 
 .nav-lin:active {
-  color: #ccc;
+  color: black;
 }
 
 /* bottom nav bar */
@@ -32,7 +40,7 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  border: 2px solid #ccc;
+  border: 2px solid black;
   border-radius: 20px;
   text-decoration: none;
   font-size: 2rem;
@@ -41,7 +49,158 @@
 }
 
 .nav-link-bottom:hover {
-  color: white;
+  color: black;
   border: 2px solid slateblue;
   transform: scale(1.2);
+}
+
+/* Carousel CSS */
+
+/* Make the carousel take full width and height of its parent */
+#ourFirstSlider {
+  position: relative;
+}
+
+/* style the images */
+#ourFirstSlider .carousel-item img {
+  margin-top: 1rem;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid grey;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+/* style the nest/prev buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  padding: 1rem;
+}
+
+/* title */
+#ourFirstSlider h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 3rem;
+  color: slateblue;
+}
+/* video section */
+
+.containers {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.containers h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 3rem;
+  color: slateblue;
+}
+
+.videos01,
+.videos02,
+.videos03 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 50%; */
+  overflow: hidden;
+  margin: 24px auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.videos01 video,
+.videos02 video,
+.videos03 video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 80vh;
+  border: outset;
+  border-width: 1rem;
+  border-radius: 10px;
+  border-color: brown;
+}
+
+.text {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-style: solid;
+  border-color: black;
+  background-color: blueviolet;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.text h3 {
+  margin: 1rem;
+  font-size: 3rem;
+  color: white;
+}
+
+.text p {
+  margin: 1rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.text p:hover {
+  font-size: 2rem;
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .containers h3 {
+    font-size: 2rem;
+  }
+
+  .containers p:hover {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Center */
+  .text p:hover {
+    font-size: 1.2rem;
+  }
+  .container2 article {
+    margin: 0;
+  }
+
+  .container2 p:hover {
+    font-size: 1rem;
+  }
+
+  .container2 a:hover {
+    font-size: 1rem;
+  }
 }
