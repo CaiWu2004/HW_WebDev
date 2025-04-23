@@ -1,0 +1,98 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* top nav bar */
+
+.navbar-brand {
+  font-size: 3rem;
+  color: slateblue;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: slateblue;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.nav-lin:active {
+  color: #ccc;
+}
+
+/* bottom nav bar */
+/* 
+.nav-item-bottom {
+  font-size: 1.5rem;
+  border-style: solid;
+  color: white;
+} */
+
+.nav-link-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: slateblue;
+  transition: all 0.3s ease;
+}
+
+.nav-link-bottom:hover {
+  color: white;
+  border: 2px solid slateblue;
+  transform: scale(1.2);
+}
+
+/* video */
+
+/* allow the video background to fit the screen no matter the size */
+.full-screen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.full-screen-container video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* text/h2 */
+
+.char {
+  font-size: 5rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccc;
+}
+
+.char:nth-child(1) {
+  top: 30vh;
+}
+
+.char:nth-child(2) {
+  top: 40vh;
+}
+
+.char:nth-child(3) {
+  top: 50vh;
+}

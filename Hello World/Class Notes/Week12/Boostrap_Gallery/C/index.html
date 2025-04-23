@@ -14,6 +14,32 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <style>
+      /* This selector is grabbed using google developer tools, note the specificity! */
+      .carousel-indicators [data-bs-target] {
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        /* Icon color */
+        color: white;
+        font-size: 20px;
+        text-indent: 0;
+      }
+      /* The container div for my captions, maybe you want to add a transparent color */
+      .carousel-caption {
+        /* background-color: rgba(0, 0, 0, 0.3); */
+      }
+      /* target only the h5s we want */
+      .carousel-caption h5 {
+        text-transform: uppercase;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .carousel-caption p {
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar with brand on left, menu on right, and a dropdown menu -->
@@ -69,16 +95,18 @@
               </ul>
             </li>
             <!-- end dropdown menu -->
-
-            <!-- End Carousel -->
           </ul>
         </div>
       </div>
     </div>
-
+    <!-- end bootstrap nav bar -->
     <!-- Begin  First Carousel-->
     <!-- Container div takes the id of this slideshow, change transition type with classnames eg: slide => fade-->
-    <div id="ourFirstSlider" class="carousel slide">
+    <div
+      id="ourFirstSlider"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
       <!-- These are the dotes on the bottom highlighting which slide you are on make sure ID in data-bs-target matches  -->
       <div class="carousel-indicators">
         <button
@@ -141,10 +169,12 @@
           </div>
         </div>
       </div>
+      <!-- end name carosel content -->
+      <!-- Prev next buttons don't forget to update id in data-bs-target -->
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleCaptions"
+        data-bs-target="#ourFirstSlider"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -153,7 +183,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleCaptions"
+        data-bs-target="##ourFirstSlider"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>

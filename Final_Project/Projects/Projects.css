@@ -1,0 +1,47 @@
+/* top nav bar */
+
+.navbar-brand {
+  font-size: 3rem;
+  color: slateblue;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: slateblue;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.nav-lin:active {
+  color: #ccc;
+}
+
+/* bottom nav bar */
+/* 
+.nav-item-bottom {
+  font-size: 1.5rem;
+  border-style: solid;
+  color: white;
+} */
+
+.nav-link-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: slateblue;
+  transition: all 0.3s ease;
+}
+
+.nav-link-bottom:hover {
+  color: white;
+  border: 2px solid slateblue;
+  transform: scale(1.2);
+}
