@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: gray;
+  /* background-color: gray; */
+  background: url(../Img/desmumtz13.jpg);
 }
 
 /* top nav bar */
@@ -40,7 +41,7 @@ body {
   align-items: center;
   width: 48px;
   height: 48px;
-  border: 2px solid black;
+  border: 2px solid rgba(30, 235, 235, 0.9);
   border-radius: 20px;
   text-decoration: none;
   font-size: 2rem;
@@ -49,7 +50,7 @@ body {
 }
 
 .nav-link-bottom:hover {
-  color: black;
+  color: rgba(30, 235, 235, 0.9);
   border: 2px solid slateblue;
   transform: scale(1.2);
 }
@@ -96,9 +97,9 @@ body {
 
 /* title */
 #ourFirstSlider h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 10px;
   margin-left: 3rem;
   color: slateblue;
 }
@@ -113,10 +114,10 @@ body {
 }
 
 .containers h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 0;
   margin-top: 0;
-  margin-left: 3rem;
+  margin-left: 2rem;
   color: slateblue;
 }
 
@@ -146,7 +147,7 @@ body {
   border: outset;
   border-width: 1rem;
   border-radius: 10px;
-  border-color: brown;
+  border-color: rgba(30, 235, 235, 0.9);
 }
 
 .text {
@@ -155,7 +156,7 @@ body {
   padding: 1rem;
   border-style: solid;
   border-color: black;
-  background-color: blueviolet;
+  background-color: slateblue;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -173,24 +174,24 @@ body {
 }
 
 .text p:hover {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
 }
 
 @media screen and (max-width: 1024px) {
   .containers h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .containers p:hover {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   /* Center */
   .text p:hover {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .container2 article {
     margin: 0;
