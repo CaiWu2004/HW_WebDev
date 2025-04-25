@@ -78,7 +78,7 @@ body {
 /* text/h2 */
 
 .char {
-  font-size: 5rem;
+  font-size: 10rem;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -86,7 +86,7 @@ body {
 }
 
 .char:nth-child(1) {
-  top: 30vh;
+  top: 20vh;
 }
 
 .char:nth-child(2) {
@@ -94,5 +94,5 @@ body {
 }
 
 .char:nth-child(3) {
-  top: 50vh;
+  top: 60vh;
 }

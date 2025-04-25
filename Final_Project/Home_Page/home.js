@@ -18,6 +18,9 @@ tl.from(bg, 1, { opacity: 0 })
     ease: "power4.out",
   }) /*Use x and y instead of top, bottom, etc so that the character won't move while the screen is being resized*/
   .from(bottomChar, 1.5, { y: 500, opacity: 0, ease: "power4.out" });
+// .to(topChar, 1.5, { x: 1000, opacity: 0, ease: "power4.out" })
+// .to(middleChar, 1.5, { x: -1000, opacity: 0, ease: "power4.out" })
+// .to(bottomChar, 1.5, { y: 1000, opacity: 0, ease: "power4.out" });
 
 // animate the charathers so that it slides in form the bottom
 
