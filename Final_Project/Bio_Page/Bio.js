@@ -1,4 +1,6 @@
-const words = ["Designer", "Developer", "Creator", "Freelancer"];
+// ai generated because the type.js import doesn't work
+
+const words = ["Designer", "Developer", "Creator", "Game Developer"];
 const textElement = document.getElementById("text");
 let wordIndex = 0;
 let charIndex = 0;

@@ -138,6 +138,10 @@ body {
   line-height: 1;
 }
 
+.bio-section .bio-intro h1 span {
+  color: slateblue;
+}
+
 @media (max-width: 1200px) {
   .bio-section .bio-intro h1 {
     font-size: 60px;
