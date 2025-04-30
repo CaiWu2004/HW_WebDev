@@ -21,6 +21,7 @@ body {
 
 .nav-link:hover {
   color: #ccc;
+  border-bottom: 2px solid white;
 }
 
 .nav-lin:active {

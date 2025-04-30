@@ -20,12 +20,16 @@ body {
 
 .nav-link:hover {
   color: #ccc;
+  border-bottom: 2px solid white;
 }
 
 .nav-lin:active {
   color: #ccc;
 }
 
+.navbar {
+  z-index: 100000;
+}
 /* bottom nav bar */
 /* 
 .nav-item-bottom {

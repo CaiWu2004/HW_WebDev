@@ -20,7 +20,8 @@ body {
 }
 
 .nav-link:hover {
-  color: black;
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .nav-lin:active {
