@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: black;
+}
+
+/* top nav bar */
+
+.navbar-brand {
+  font-size: 3rem;
+  color: slateblue;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: slateblue;
+}
+
+.nav-link:hover {
+  color: #ccc;
+  border-bottom: 2px solid white;
+}
+
+.nav-lin:active {
+  color: #ccc;
+}
+
+.navbar {
+  z-index: 100000;
+}
+
+/* bottom nav bar */
+
+.nav-link-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: slateblue;
+  transition: all 0.3s ease;
+}
+
+.nav-link-bottom:hover {
+  color: white;
+  border: 2px solid slateblue;
+  transform: scale(1.2);
+}
+
+/* container */
+.container {
+  background-color: rgba(195, 227, 255, 0.8);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* heading edits */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+/* education */
+
+.school {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.school h6 {
+  margin: 10px;
+}
+
+/* leadership */
+
+.leadership-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.place {
+  margin: 0;
+}
+
+.date {
+  margin: 0;
+  white-space: nowrap; /* Prevents date from wrapping */
+}
+
+/* downlaod button */
+.download-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background-color: slateblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #5a5aff;
+}
